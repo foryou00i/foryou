@@ -3,36 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesan Bucin Untukmu ❤️</title>
+    <title>Surat Cinta Untukmu 💌</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             background-color: pink;
-            margin: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
         }
         h1 {
             color: red;
+            font-size: 28px;
         }
-        .love-btn {
+        .love-letter {
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+            margin: auto;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .hidden {
+            display: none;
+        }
+        .love-message {
+            font-size: 24px;
+            color: darkred;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .btn {
             background-color: red;
             color: white;
+            font-size: 18px;
             padding: 10px 20px;
             border: none;
-            font-size: 16px;
             cursor: pointer;
             border-radius: 10px;
+            margin: 10px;
+        }
+        .no-btn {
+            background-color: gray;
         }
     </style>
     <script>
-        function showLoveMessage() {
-            alert("Aku sayang kamu selamanya ❤️");
+        function openLetter() {
+            document.getElementById("love-message").classList.remove("hidden");
+            document.getElementById("heart").classList.remove("hidden");
+            document.getElementById("letter").style.display = "none";
+        }
+
+        function acceptLove() {
+            alert("Yeay! Aku sayang kamu selamanya! ❤️😘");
+        }
+
+        function rejectLove() {
+            alert("Gak boleh nolak! Klik 'Ya' dong 🥺💕");
         }
     </script>
 </head>
 <body>
-    <h1>Hai Sayang! 💖</h1>
-    <p>Aku punya sesuatu buat kamu...</p>
-    <button class="love-btn" onclick="showLoveMessage()">Klik Aku 💘</button>
+    <div class="container">
+        <h1>Hai Sayang! Aku Punya Sesuatu Untukmu 💖</h1>
+        <div class="love-letter" id="letter" onclick="openLetter()">📩 Klik untuk membuka surat 💌</div>
+        <h2 id="love-message" class="love-message hidden">Aku sayang kamu selamanya! ❤️😘</h2>
+        <div id="heart" class="heart hidden">❤️</div>
+
+        <h2 class="hidden" id="question">Maukah kamu jadi milikku? 💕</h2>
+        <button class="btn hidden" id="yes-btn" onclick="acceptLove()">Ya, aku mau! 😍</button>
+        <button class="btn no-btn hidden" id="no-btn" onclick="rejectLove()">Tidak 😭</button>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("question").classList.remove("hidden");
+            document.getElementById("yes-btn").classList.remove("hidden");
+            document.getElementById("no-btn").classList.remove("hidden");
+        }, 3000);
+    </script>
 </body>
 </html>
