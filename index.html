@@ -3,117 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surat Cinta Untukmu 💌</title>
+    <title>Semangat Sayang 💖</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: pink;
+            background-color: #ffdde1;
+            color: #d6336c;
             margin: 0;
             padding: 0;
         }
         .container {
             margin-top: 50px;
+            padding: 20px;
         }
         h1 {
-            color: red;
             font-size: 28px;
+            color: #ff3366;
         }
-        .love-letter {
-            width: 320px;
-            height: 220px;
-            background-color: white;
+        .quote {
+            font-size: 20px;
+            font-weight: bold;
+            background: white;
+            padding: 20px;
             border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            font-weight: bold;
-            color: red;
-            margin: auto;
-            cursor: pointer;
+            display: inline-block;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-        .love-letter:hover {
-            transform: scale(1.1);
-        }
-        .hidden {
-            display: none;
-        }
-        .love-message {
-            font-size: 24px;
-            color: darkred;
-            font-weight: bold;
-            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
         .heart {
+            font-size: 40px;
             color: red;
-            font-size: 50px;
+            margin-top: 20px;
             animation: heartbeat 1.5s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         @keyframes heartbeat {
             0% { transform: scale(1); }
             50% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
-        .btn {
-            background-color: red;
-            color: white;
-            font-size: 18px;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px;
-            margin: 10px;
-        }
-        .no-btn {
-            background-color: gray;
-        }
     </style>
-    <script>
-        function openLetter() {
-            document.getElementById("letter").style.display = "none";
-            document.getElementById("love-message").classList.remove("hidden");
-            document.getElementById("heart").classList.remove("hidden");
-            document.getElementById("question").classList.remove("hidden");
-            document.getElementById("yes-btn").classList.remove("hidden");
-            document.getElementById("no-btn").classList.remove("hidden");
-        }
-
-        function acceptLove() {
-            alert("Yeay! Aku sayang kamu selamanya! ❤️😘");
-        }
-
-        function rejectLove() {
-            alert("Kamu gak bisa nolak, coba klik 'Ya' dong! 🥺💕");
-        }
-    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Hai Sayang! Aku Punya Sesuatu Untukmu 💖</h1>
-        <div class="love-letter" id="letter" onclick="openLetter()">📩 Klik untuk membuka surat 💌</div>
+        <h1>✨ Pesan Untukmu, Sayang ✨</h1>
+        <div class="quote">
+            <p>"Sayang, aku tahu jalan menuju perkuliahan itu gak selalu mudah. Tapi aku percaya, kamu adalah orang yang luar biasa! Aku akan selalu ada di sini, mendukungmu, menyemangatimu, dan percaya bahwa kamu bisa mencapai impianmu. Gapai masa depanmu, karena aku ingin melihatmu bersinar di sana!"</p>
+        </div>
 
-        <h2 id="love-message" class="love-message hidden">
-            Sayangku,  
-            Sejak pertama kali aku melihatmu, hatiku tahu bahwa kamu adalah seseorang yang spesial.  
-            Setiap hari yang kita lalui bersama adalah berkah bagiku.  
-            Aku ingin kamu tahu bahwa aku sangat menghargai setiap senyumanmu, setiap kata-katamu,  
-            dan setiap momen yang kita habiskan bersama.  
-            Kamu adalah orang yang membuat hariku lebih cerah dan hatiku lebih hangat.  
-            Aku tidak bisa membayangkan hidup tanpamu, karena kamu adalah bagian terindah dari kehidupanku.  
-            <br><br>
-            Aku ingin selalu berada di sisimu, menemani setiap langkah yang kamu ambil,  
-            mendukung setiap impian yang kamu kejar, dan mencintaimu setiap detik dalam hidupku.  
-            Apakah kamu bersedia menjadi bagian dari hidupku selamanya? ❤️
-        </h2>
+        <div class="heart">❤️</div>
 
-        <div id="heart" class="heart hidden">❤️</div>
-
-        <h2 class="hidden" id="question">Maukah kamu jadi milikku? 💕</h2>
-        <button class="btn hidden" id="yes-btn" onclick="acceptLove()">Ya, aku mau! 😍</button>
-        <button class="btn no-btn hidden" id="no-btn" onclick="rejectLove()">Tidak 😭</button>
+        <div class="quote" style="margin-top: 20px;">
+            <p>"Kamu itu seperti bintang yang bersinar di malam gelap. Jangan pernah meragukan kemampuanmu sendiri! Aku tahu kamu bisa, dan aku akan selalu ada di sampingmu, mendukungmu sepenuh hati. Perjalanan menuju perkuliahan ini mungkin panjang, tapi aku ingin menjadi seseorang yang selalu ada untukmu, dari sekarang hingga kita sama-sama menggapai masa depan."</p>
+        </div>
     </div>
 </body>
 </html>
