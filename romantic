@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat Perkuliahan 💖</title>
+    <style>
+        /* Menambahkan gambar wallpaper */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 30px;
+            color: #ffebf0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .quote {
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2s ease-in-out;
+            color: white;
+            max-width: 80%;
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+            margin-top: 20px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Pesan Untukmu, Sayang ✨</h1>
+        <div class="quote">
+            <p>"Sayang, aku tahu jalan menuju perkuliahan itu gak selalu mudah. Tapi aku percaya, kamu adalah orang yang luar biasa! Aku akan selalu ada di sini, mendukungmu, menyemangatimu, dan percaya bahwa kamu bisa mencapai impianmu. Gapai masa depanmu, karena aku ingin melihatmu bersinar di sana!"</p>
+        </div>
+
+        <div class="heart">❤️</div>
+
+        <div class="quote" style="margin-top: 20px;">
+            <p>"Kamu itu seperti bintang yang bersinar di malam gelap. Jangan pernah meragukan kemampuanmu sendiri! Aku tahu kamu bisa, dan aku akan selalu ada di sampingmu, mendukungmu sepenuh hati. Perjalanan menuju perkuliahan ini mungkin panjang, tapi aku ingin menjadi seseorang yang selalu ada untukmu, dari sekarang hingga kita sama-sama menggapai masa depan."</p>
+        </div>
+    </div>
+</body>
+</html>
