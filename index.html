@@ -20,8 +20,8 @@
             font-size: 28px;
         }
         .love-letter {
-            width: 300px;
-            height: 200px;
+            width: 320px;
+            height: 220px;
             background-color: white;
             border-radius: 10px;
             display: flex;
@@ -33,6 +33,10 @@
             margin: auto;
             cursor: pointer;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .love-letter:hover {
+            transform: scale(1.1);
         }
         .hidden {
             display: none;
@@ -69,9 +73,12 @@
     </style>
     <script>
         function openLetter() {
+            document.getElementById("letter").style.display = "none";
             document.getElementById("love-message").classList.remove("hidden");
             document.getElementById("heart").classList.remove("hidden");
-            document.getElementById("letter").style.display = "none";
+            document.getElementById("question").classList.remove("hidden");
+            document.getElementById("yes-btn").classList.remove("hidden");
+            document.getElementById("no-btn").classList.remove("hidden");
         }
 
         function acceptLove() {
@@ -79,7 +86,7 @@
         }
 
         function rejectLove() {
-            alert("Gak boleh nolak! Klik 'Ya' dong 🥺💕");
+            alert("Kamu gak bisa nolak, coba klik 'Ya' dong! 🥺💕");
         }
     </script>
 </head>
@@ -87,20 +94,26 @@
     <div class="container">
         <h1>Hai Sayang! Aku Punya Sesuatu Untukmu 💖</h1>
         <div class="love-letter" id="letter" onclick="openLetter()">📩 Klik untuk membuka surat 💌</div>
-        <h2 id="love-message" class="love-message hidden">Aku sayang kamu selamanya! ❤️😘</h2>
+
+        <h2 id="love-message" class="love-message hidden">
+            Sayangku,  
+            Sejak pertama kali aku melihatmu, hatiku tahu bahwa kamu adalah seseorang yang spesial.  
+            Setiap hari yang kita lalui bersama adalah berkah bagiku.  
+            Aku ingin kamu tahu bahwa aku sangat menghargai setiap senyumanmu, setiap kata-katamu,  
+            dan setiap momen yang kita habiskan bersama.  
+            Kamu adalah orang yang membuat hariku lebih cerah dan hatiku lebih hangat.  
+            Aku tidak bisa membayangkan hidup tanpamu, karena kamu adalah bagian terindah dari kehidupanku.  
+            <br><br>
+            Aku ingin selalu berada di sisimu, menemani setiap langkah yang kamu ambil,  
+            mendukung setiap impian yang kamu kejar, dan mencintaimu setiap detik dalam hidupku.  
+            Apakah kamu bersedia menjadi bagian dari hidupku selamanya? ❤️
+        </h2>
+
         <div id="heart" class="heart hidden">❤️</div>
 
         <h2 class="hidden" id="question">Maukah kamu jadi milikku? 💕</h2>
         <button class="btn hidden" id="yes-btn" onclick="acceptLove()">Ya, aku mau! 😍</button>
         <button class="btn no-btn hidden" id="no-btn" onclick="rejectLove()">Tidak 😭</button>
     </div>
-
-    <script>
-        setTimeout(() => {
-            document.getElementById("question").classList.remove("hidden");
-            document.getElementById("yes-btn").classList.remove("hidden");
-            document.getElementById("no-btn").classList.remove("hidden");
-        }, 3000);
-    </script>
 </body>
 </html>
